@@ -6,7 +6,8 @@ pipeline {
         }
     }
     stages {
-        parallel {
+        stage('Pararara') {
+          parallel {
             stage('Paralel') {
                 steps{
                     echo 'parallel'
@@ -17,6 +18,7 @@ pipeline {
                     sh 'mvn -B -DskipTests clean package'
                 }
             }
+        }
         }
         stage('Test') {
             steps {
