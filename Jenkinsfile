@@ -6,6 +6,13 @@ pipeline {
         }
     }
     stages {
+        parallel {
+            stage('Test On Windows') {
+                steps{
+                    echo 'parallel'
+                }
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
