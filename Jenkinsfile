@@ -21,7 +21,7 @@ pipeline {
             echo 'Message'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             echo 'Another'
           }
@@ -43,6 +43,11 @@ pipeline {
     stage('Deliver') {
       steps {
         sh './jenkins/scripts/deliver.sh'
+      }
+    }
+    stage('Bye') {
+      steps {
+        echo 'Bye'
       }
     }
   }
