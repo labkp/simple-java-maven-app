@@ -15,9 +15,15 @@ pipeline {
           }
         }
         stage('Build') {
+          agent any
           steps {
             sh 'mvn -B -DskipTests clean package'
             echo 'Message'
+          }
+        }
+        stage('') {
+          steps {
+            echo 'Another'
           }
         }
       }
