@@ -7,7 +7,7 @@ pipeline {
     }
     stages {
         parallel {
-            stage('Test On Windows') {
+            stage('Paralel') {
                 steps{
                     echo 'parallel'
                 }
